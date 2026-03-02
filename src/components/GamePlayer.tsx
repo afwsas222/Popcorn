@@ -1,7 +1,7 @@
 import React from 'react';
 import { Game } from '../types';
 import { X, Maximize2, RotateCcw, ExternalLink } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface GamePlayerProps {
   game: Game | null;

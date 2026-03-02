@@ -3,9 +3,11 @@ import { Navbar } from './components/Navbar';
 import { GameCard } from './components/GameCard';
 import { GamePlayer } from './components/GamePlayer';
 import { Game } from './types';
-import gamesData from './games.json';
-import { motion, AnimatePresence } from 'motion/react';
+import gamesDataRaw from './games.json';
+import { motion, AnimatePresence } from 'framer-motion';
 import { TrendingUp, Sparkles, Clock } from 'lucide-react';
+
+const gamesData = (Array.isArray(gamesDataRaw) ? gamesDataRaw : (gamesDataRaw as any).default || []) as Game[];
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState('');

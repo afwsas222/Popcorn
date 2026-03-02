@@ -1,7 +1,7 @@
 import React from 'react';
 import { Game } from '../types';
 import { Play } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
 interface GameCardProps {
   game: Game;
